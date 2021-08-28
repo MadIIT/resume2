@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Fonts    -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Montserrat&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Syne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Orbitron&family=Syne&display=swap"
+          rel="stylesheet">
+    <style>
+        body, html {
+            overflow:hidden;
+            width:100%;
+            height:100%;
+            background-color:#00003f;
+            margin:0;
+            z-index:0;
+        }
+        stars{
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            z-index:0;
+        }
+        .content {
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background-color:#00003f;
+            position:absolute;
+            top:0;
+            z-index:3;
+            clip-path:circle(150px at 20% 50%);
+            opacity:1;
+        }
+
+
+        .student-div {
+            position:absolute;
+            left:20%;
+            top:40%;
+        }
+
+
+
+        .elon {
+            position:absolute;
+            pointer-events:none;
+            z-index:0;
+            color:orange;
+            font-family:DotGothic16;
+            left:20%;
+            top:10%;
+            font-size:21px;
+        }
+        .starman {
+            position:absolute;
+            z-index:1;
+            top:20%;
+            height:120px;
+            width:150px;
+            pointer-events:none;
+        }
+        .fan {
+            transform-origin:left center;
+            transform: rotate(20deg);
+            position:absolute;
+            white-space:pre;
+            top:50px;
+            left:-20px;
+        }
+
+
+        .engineering {
+        position:absolute;
+            pointer-events:none;
+            z-index:0;
+            color:orange;
+            font-family:Syne;
+            left:70%;
+            top:80%;
+            font-size:40px;
+        }
+        .mystery {
+        position:absolute;
+            pointer-events:none;
+            z-index:0;
+            color:orange;
+            font-family:Orbitron;
+            left:80%;
+            top:40%;
+            font-size:40px;
+        }
+        .fill {
+            position:absolute;
+            background-color:black;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            z-index:1;
+        }
+        .iitm-logo {
+            width:150px;
+            height:150px;
+            position:absolute;
+            top:100px;
+            left:-60px;
+            pointer-events:none;
+        }
+        .one {
+            position:absolute;
+            font-family:Manrope;
+            font-size:40px;
+            color:white;
+            padding-bottom:75px;
+            transform-origin:bottom center;
+            pointer-events:none;
+        }
+        .a-1 {
+            transform:rotate(-90deg);
+        }
+        .a-2 {
+            transform:rotate(-65deg);
+        }
+        .a-3 {
+            transform:rotate(-42deg);
+        }
+        .a-4 {
+            transform:rotate(-20deg);
+        }
+        .a-5 {
+            transform:rotate(5deg);
+        }
+        .a-6 {
+            transform:rotate(32.5deg);
+        }
+        .a-7 {
+            transform:rotate(65deg);
+        }
+        .a-8 {
+            transform:rotate(90deg);
+        }
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <img class="stars" src="bg-stars.svg">
+    <div class="student-div">
+        <img class="iitm-logo"
+             src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1200px-IIT_Madras_Logo.svg.png">
+        <div style="position:relative;">
+            <p class="one a-1">F</p>
+            <p class="one a-2">R</p>
+            <p class="one a-3">E</p>
+            <p class="one a-4">S</p>
+            <p class="one a-5">H</p>
+            <p class="one a-6">M</p>
+            <p class="one a-7">A</p>
+            <p class="one a-8">N</p>
+            <img class="iitm-logo"
+                 src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/IIT_Madras_Logo.svg/1200px-IIT_Madras_Logo.svg.png">
+        </div>
+    </div>
+    <div class="elon">
+        <div style="position:relative;">
+            <img class="starman" src="starman.png">
+            <p class="fan">Fan of Elon Musk</p>
+        </div>
+    </div>
+    <p class="engineering">Engineering is the Best</p>
+    <p class="mystery"> Are we all alone? </p>
+</div>
+<div class="fill">
+</div>
+<script>
+    document.addEventListener("mousemove",function(e) {
+    function func(){
+        let circle = document.querySelector(".content");
+        let left = e.offsetX;
+        let top = e.offsetY;
+        left = left - 75;
+        top = top - 75;
+        circle.style.clipPath = "circle(150px at " + left + "px " + top + "px)";
+        }
+        setTimeout(func(),0.0000001);
+    });
+
+
+
+</script>
+</body>
+</html>
